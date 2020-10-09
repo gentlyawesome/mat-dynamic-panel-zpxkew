@@ -1,0 +1,15 @@
+<section>
+  <div>Comp A</div>
+  <button mat-button color="primary" (click)="openRightPanel(tempRef)">Open</button>
+  <button mat-button color="accent" (click)="openRightPanelTwo()">Open second</button>
+</section>
+
+<ng-template #tempRef>
+  <p>Hello, first template!</p>
+  <button mat-button color="primary" (click)="sidenavService.panel.close()">Close</button>
+</ng-template>
+
+<ng-template #secondTempRef>
+  <p>Hello, second template!</p>
+  <button mat-button color="accent" (click)="sidenavService.panel.close()">Close</button>
+</ng-template>

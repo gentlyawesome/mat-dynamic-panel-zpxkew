@@ -1,0 +1,19 @@
+<section>
+  <div>Comp B</div>
+  <button mat-button color="primary" (click)="openRightPanel(tempRef)">Open</button>
+</section>
+<ng-template #tempRef>
+  <mat-toolbar>
+    Panel toolbar
+    <span fxFlex></span>
+    <button mat-icon-button (click)="sidenavService.panel.close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar>
+  <p>Hello, second component!</p>
+  <mat-list>
+    <mat-list-item *ngFor="let i of [1, 2, 3, 4, 5, 6]">
+      <h2 matLine>Item {{ i }}</h2>
+    </mat-list-item>
+  </mat-list>
+</ng-template>
